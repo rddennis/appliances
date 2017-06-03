@@ -1,0 +1,181 @@
+body, html {
+	font-family: Tahoma;
+	font-size: 14px;
+	margin: 0px;
+}
+
+.row {
+	width: 90%;
+	height: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.inner-row {
+	width: 100%;
+}
+
+.column {
+	display: inline-block;
+	vertical-align: top;
+}
+
+#header .row {
+	display: table;
+}
+
+.header-column {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#header, footer {
+	height: 70px;
+	background-color: rgb(238, 234, 240);
+}
+
+#header-title {
+	display: table;
+}
+
+#header-title img {
+	display: table-cell;
+	vertical-align: center;
+}
+
+#header-title span {
+	display: table-cell;
+	vertical-align: center;
+}
+
+#right {
+	text-align: right;
+	right: 5%;
+}
+
+#main, #content {
+	height: calc(100vh - 70px);
+	max-height: calc(100vh - 70px);
+	min-width: 100vw;
+}
+
+#main {
+	background: linear-gradient(rgba(65, 105, 225, 0.65), rgba(65, 105, 225, 0.65)),
+                rgba(65,105,225,0.65) url('images/nola3.jpg') center;
+	background-size: cover;
+	background-color: rgba(65, 105, 225, 1);
+}
+
+.main-column {
+	width: 49%;
+	padding-top: 5%;
+}
+
+#main-content {
+	position: absolute;
+	bottom: 20vh;
+	width: 48vw;
+}
+
+#main-content a {
+	color: black;
+}
+
+#split-content {
+	width: 55%;
+}
+
+#center {
+	background-color: black;
+	height: 20vh;
+	line-height: 15vh;
+}
+
+#center h2 {
+	color: red;
+	text-shadow: 0px 2px 3px #000000;
+}
+
+#content {
+	background-color: rgb(0, 0, 0, 0.6);
+	display: table;
+}
+
+#content .row {
+	width: 90vw;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.content-column {
+	width: 31%;
+	margin: 0.97%; 
+	text-align: center;
+	}
+
+.fa-4x {
+	color: rgb(65, 105, 225);
+}
+
+footer {
+	width: 100%;
+	display: table;
+	font-size: 2vh; 
+	/*margin-top: -10px;*/
+	text-align: center;
+	vertical-align: center;
+}
+
+footer p {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(65, 105, 225);
+}
+
+@media only screen and (max-width: 800px) {
+
+	.right-header-column h2 {
+		font-size: 100%;
+	}
+
+	#right {
+		display: none;
+	}
+
+	#main-image {
+		display: none;
+	}
+
+	.main-column {
+		padding-top: 0;
+	}
+
+	#main-content-container {
+		width: 95vw;
+		height: 100vh;		
+		display: table;
+	}
+
+	#main-content {
+		position: unset;
+		bottom: unset;
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	#split-content {
+		width: 90vw;
+	}
+
+	.content-column {
+		padding-top: 5%;
+		width: 100%;
+		display: block;
+	}
+
+}
