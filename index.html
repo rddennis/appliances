@@ -9,7 +9,7 @@
 	<meta property="og:type" content="website"/>
 	<!-- <meta property="og:image" content=""/> -->
 	<!-- <meta property="og:url" content=""/> -->
-	<meta property="og:description" content="Ronald Dennis is a certified appliance repairman servicing the Greater New Orleans Metropolitan area with over 20 years of experience."/>
+	<meta property="og:description" content="Ronald Dennis is a certified appliance repairman servicing the Greater New Orleans Metropolitan area with over 25 years of experience."/>
 
 	<link rel="stylesheet" type="text/css" href="style.css">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
@@ -22,36 +22,51 @@
 
 <!-- Header -->
 
-<div id="header">
+<nav>
 <div class="row">
-  <div class="column header-column">
-    <div class="inner-row">
-      <div class="column header-column right-header-column">
+  <div class="navbar-left">
+    <div class="navbar-left-container">
+      <div class="navbar-column left-nav">
         <img src="images/fdl.png" style="height: 40px;">
       </div>
-      <div class="column header-column right-header-column">
+      <div class="navbar-column left-nav">
         <h2 id="header-title"><span>Appliance Repair Services in New Orleans</span></h2>
       </div>
-    </div> <!-- Closes inner row -->
+    </div> <!-- Closes navbar-left-container -->
   </div> <!-- Closes inner column -->
-  <div class="column header-column">
-    <h3 id="right"><a href="tel:5043437461">Contact Ronald</a></h3>
+  <div id="dropdown-container">
+    <i id="menu-dropdown" class="fa fa-list fa-2x" aria-hidden="true"></i>
+    </div>
+  <ul class="navbar-right">
+
+    <li><a href="#about">About</a></li>
+    <li><a href="tel:5043437461">Contact</a></li>
+  </ul>
+</div> <!-- Closes row -->
+
+  <div id="mobile-menu-container">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="tel:5043437461">Call</a></li>
+    </ul>
   </div>
-</div>
-</div>
+
+</nav>
 
 <!-- Main Div -->
 <div id="main">
   <div class="row">
     <div class="main-column column" id="main-content-container">
+      <div id="content-table">
       <div id="main-content">
-        <h1>We service washers, dryers, stoves, refrigerators, and air conditioning units</h1>
-        <h2>Greater New Orleans Metropolitan Area</h2>
-        <h2>Contact us at <a href="tel:5043437461">504.343.7461</a></h2>
+        <h1>Washer, dryer, stove, refrigerator, and air conditioning unit repair services by a Certified Universal Technician</h1>
+        <h3>Greater New Orleans Metropolitan Area</h3>
+        <h3 id="contact-us"><a href="tel:5043437461">Contact us at 504.343.7461</a></h3>
+      </div>
       </div>
     </div>  
     <div class="main-column column" id="main-image">
-      <img src="images/refrigerator.png" style="max-width: 70vh;min-height:109vh; float: right;">
+      <img src="images/refrigerator-repair.png" style="max-width: 70vh;min-height:109vh; float: right;">
     </div>
   </div>
 </div>
@@ -61,26 +76,26 @@
 <div id="center">
   <div class="row">
     <div class="column" id="split-content">
-      <h2 style="text-align: center;">Over 20 Years of Experience!</h2>    
+      <h2 style="text-align: center;">Over 25 Years of Experience! <br /><i class="fa fa-angle-double-right" aria-hidden="true"></i>  <a href="tel:5043437461">Call Now</a>  <i class="fa fa-angle-double-left" aria-hidden="true"></i></h2>    
     </div>
   </div>
 </div>
 
 <!-- Content Div -->
 
-<div id="content">
+<div id="about">
   <div class="row">
-    <div class="content-column column">
+    <div class="about-column column">
       <i class="fa fa-check-square-o fa-4x" aria-hidden="true"></i>
-      <h3>Experienced Servicemen</h3>
-      <p>Ronald Dennis has over 20 years of experience servicing households, businesses, and complexes in the New Orleans Metropolitan Area. Whether you're matched with Ronald or one of his highly-skilled partners, you can be assured you'll receive the best service in the city.</p>
+      <h3>Experienced Appliance Repairmen</h3>
+      <p>Ronald Dennis is a Certified Universal Technician with over 25 years of experience servicing households, businesses, and complexes in the New Orleans Metropolitan Area. Whether you're matched with Ronald or one of his highly-skilled partners, you can be assured you'll receive the best service in the city.</p>
     </div>
-    <div class="content-column column">
+    <div class="about-column column">
       <i class="fa fa-check-square-o fa-4x" aria-hidden="true"></i>
       <h3>Affordable Rates</h3>
-      <p>With service rates starting as low as $65, you'll spend less and receive the same quality service. Unlike many competitors, we'll be honest about the needs of your machine the first time--and we'll fix them all. That means you can keep more money in your pocket.</p>
+      <p>Ronald, or one of his trusted technicians, will come out to diagnose your issue for a service fee of $65, and, if you choose to have your repairs completed that day, the service fee will be discounted from your overall total. This way, you'll spend less and receive the same quality service.</p>
     </div>
-    <div class="content-column column">
+    <div class="about-column column">
       <i class="fa fa-check-square-o fa-4x" aria-hidden="true"></i>
       <h3>Quality, Full Service</h3>
       <p>We specialize in repairing appliances of all types. That includes refrigerators, washers, dryers, stoves, dishwashers, and air conditioning units. We'll only ever send the serviceman who is most qualified to solve your problem. </p>
@@ -91,8 +106,19 @@
 <!-- Footer -->
 
 <footer>
-  <p><a href="http://rddennis.github.io">Website by Ronesha D. Dennis</a></p>
+ <div id="footer-container">
+  <a href="http://rddennis.github.io">Site created by Ronesha D. Dennis</a>
+  </div>
 </footer>
+
+<script type="text/javascript">
+  $("#menu-dropdown").click(function(){
+    if ($("#mobile-menu-container").css("display") == "block"){
+        $("#mobile-menu-container").slideUp("slow");
+    } else {
+    $("#mobile-menu-container").slideDown("slow");
+    }});
+</script>
 
 </body>
 </html>
